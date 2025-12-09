@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PolyglotData</title><link href="polyglotdata.com/" rel="alternate"/><link href="polyglotdata.com/feeds/all.atom.xml" rel="self"/><id>polyglotdata.com/</id><updated>2025-10-30T00:00:00-03:00</updated><entry><title>Manipulação de Dados com Python</title><link href="polyglotdata.com/intro-python.html" rel="alternate"/><published>2025-10-30T00:00:00-03:00</published><updated>2025-10-30T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-30:polyglotdata.com/intro-python.html</id><summary type="html">&lt;p&gt;Apresentação do Python para Dados&lt;/p&gt;</summary><content type="html">&lt;h5&gt;O que é Python&lt;/h5&gt;
+&lt;p&gt;Python é uma linguagem poderosa e simples de aprender.&lt;br&gt;
+Vamos ver um exemplo básico:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;saudacao&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Olá, &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;! Seja bem-vindo ao Pelican.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;saudacao&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Andre&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5&gt;Para que serve o Python&lt;/h5&gt;
+&lt;p&gt;Durante muito tempo o trabalho com dados se restringia a dados que estavam em grandes bancos de dados tradicionais como Oracle, Sql Server.... com o tempo outros bancos como MySql e PostGree... dentre outros foram tomando espaço.&lt;/p&gt;
+&lt;p&gt;Porem ocorreu um fato interessante, com a advento do BigData, o DataLake inicialmente e DeltaLake na sequẽncia foram tomando para si uma responsabilidade que retirou dos bancos de dados relacionais os dados oficiais da empresa. &lt;/p&gt;
+&lt;p&gt;Conclui que alem de dominar a linguagem estruturada Sql, passou a ser importante dominar outra forma de manipular dados que não fosse estruturado. No mercado existem muitas ferramentas robusta e pagas, porem a liberdade de manipular os dados com velocidade independentemente de ferramentas de terceiro, na minha visão apareceu o python como uma ótima estratégia.&lt;/p&gt;
+&lt;h5&gt;Mas eu preciso virar um programador Python, para tratar dados?&lt;/h5&gt;
+&lt;p&gt;Conhecimento não ocupa espaço, uma vez que consigamos sintetiza-lo e ter mecanimos rápidos de acesso para recordar pontos chaves para resolver um problema. Com o tempo essa essencia de conhecimentos nos permite resolver qualquer problema, sem necessitar de uma memória de elefante, e teremos consciência do mecanismo utilizado para resolver esse ou aquele problema, nao delegando 100% da solução para uma IA. Isso tem um grande benefício, pois vou treinando minha mente para pensar na solução, usando a IA para complementar aquilo que não sou capaz de fazer ou simplesmente não vale a pena fazer, pelo fato da IA trabalhar melhor do que eu.&lt;/p&gt;
+&lt;h5&gt;Objetivo desse site&lt;/h5&gt;
+&lt;p&gt;Hoje em dia os modelos de IA, que nos responde baseado em Prompt é a melhor forma de aprender, logo surigo que procure essas ferramentas para aprofundar e entender as tecnologias que precisa.
+Esse site tem o objetivo, de unir de forma sintética inicialmente, os conhecimentos necessarios para manipulação de dados ,justificando o tema PlolyglotData. E cumpri outro objetivo que é pare eu aprender tambem, ao se escrever o que se aprendeu com exemplos, como se tivesse ensinando a alguem alguma coisa, o conhecimento sedimento de forma mais clara e real dentro de nossa inteligência. 
+E caso seja útil para alguem, esse meu trabalho de síntese, seja bem vindo.&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Ferramento para Codificar em Python</title><link href="polyglotdata.com/ide-estrutura-codigo-python.html" rel="alternate"/><published>2025-10-29T00:00:00-03:00</published><updated>2025-10-29T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-29:polyglotdata.com/ide-estrutura-codigo-python.html</id><summary type="html">&lt;p&gt;Apresentação e Estrutura simplificada para trabalhar nas ferramentas de codificação em Python&lt;/p&gt;</summary><content type="html">&lt;h4&gt;O que é feito em uma IDE&lt;/h4&gt;
+&lt;p&gt;É um termo muito usado na programação, e significa "Ambiente de Desenvolvimento Integrado", que é o local onde será usado a linguagem python para codificar o tratamento em dados. Materializarei aqui uma estrutura simples e básica, para organizar o código. Que se trata onde devo escrever o que, na codificação.&lt;/p&gt;
+&lt;p&gt;O tratamento de dados será feito via programação com Python, por isso preciso ter um código de fácil manutenção.&lt;/p&gt;
+&lt;h4&gt;Notebook &amp;amp; Código padrão&lt;/h4&gt;
+&lt;p&gt;Um notebook é uma forma de programar, interativa, onde programo e vejo e resultado de forma imediata. E tambem posso ir documentando os trechos de código, para facilitar o entendimento quando precisar voltar no assunto. Esse arquivos possuem a extensão ".ipynb"&lt;/p&gt;
+&lt;p&gt;Podemos criar rotinas em Python que irão executar em algum local como um serviço, dentro de um container. Nesse caso os arquivos possuem a extensão ".py"&lt;/p&gt;
+&lt;h4&gt;Nesse documento vamos descrever duas estruturas/organização do código para já iniciar o processo de forma organizada&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;Area&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;Trabalho&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="n"&gt;ArquivoNoteBook&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipynb&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;dataControl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;data_mySql&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;data_s3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;data_file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;data_athena&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;data_msSql&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;└──&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5&gt;NoteBook&lt;/h5&gt;
+&lt;p&gt;Arquivos com extensão ".ipynb"&lt;/p&gt;
+&lt;p&gt;Esse código abaixo não precisa de nem um pacote python para rodar, a instalação nativa do python já tras esse pacote que se chama ipykernel.
+E se trata de um simples código que trabalha com uma estrutura simples de dados em lista e um loop nessa lista escrevendo no console os resultados&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;lista_dados&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;membro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;pai&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;nome&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;André Wanderley de Souza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;idade&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;51&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;peso&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;68&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;membro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;mae&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;nome&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Cleuza Samai Alves Souza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;idade&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;54&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;peso&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;52&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;membro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;filho&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;nome&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Augusto Samai de Souza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;idade&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;peso&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;membro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;filho&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;nome&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Álvaro Samai de Souza&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;idade&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;peso&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Essa família tem quatro membros&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;lista_dados&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;O &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;membro&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; se chama &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;nome&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;, tem &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;idade&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; anos e pesa &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;peso&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; kg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5&gt;Codificação Tracicional&lt;/h5&gt;
+&lt;p&gt;Arquivos com extensão ".py"&lt;/p&gt;
+&lt;p&gt;O código acima é exatamente o mesmo com a diferença que não irá precisar do pacote ipykernel, porem a forma de execução e estrutura da documentação é diferente de um notebook&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Pacotes do Python</title><link href="polyglotdata.com/pacotes-codigo-python.html" rel="alternate"/><published>2025-10-28T00:00:00-03:00</published><updated>2025-10-28T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-28:polyglotdata.com/pacotes-codigo-python.html</id><summary type="html">&lt;p&gt;Introdução breve para iniciar com os pacotes do Python que iremos usar em nosso trabalho&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Ambiente Virtual&lt;/h4&gt;
+&lt;p&gt;É muito comum na programação em python, trabalhar com um ambiente isolado, o que chamamos de ambiente virtual. Para não se misturar as configurações desse ambiente de trabalho com os demais itens do computador de trabalho pessoal.&lt;/p&gt;
+&lt;p&gt;E alem disso, podemos trabalhar em equipe sendo necessário compartilhar nosso ambiente com outros da equipe, as dependência para conexão de dados e até bibliotecas especificas para o trabalho padronizado, irá exigir um ambiente controlado em termos de versionamento do que estamos usando no momento.&lt;/p&gt;
+&lt;p&gt;O Poetry nos ajudará nisso&lt;/p&gt;
+&lt;h4&gt;Inclusão de Pacotes&lt;/h4&gt;
+&lt;p&gt;Durante o trabalho de manipulação de dados, vamos utilizar uma grande quantidade de pacotes construidos por terceiros. E tais pacotes podem ser instalados de várias formas, nesse exemplo vamos nos ater a forma de instalação usando o poetry.&lt;/p&gt;
+&lt;h4&gt;Gerenciador de Pacotes python Poetry&lt;/h4&gt;
+&lt;hr&gt;
+&lt;h5&gt;&lt;strong&gt;1. Instalar o Poetry (caso ainda não tenha)&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Se você ainda não instalou o Poetry, execute no terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-sSL&lt;span class="w"&gt; &lt;/span&gt;https://install.python-poetry.org&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Depois, adicione o caminho à sua shell (caso necessário). Ou reinicie o terminal.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5&gt;&lt;strong&gt;2. Ir para o diretório do seu projeto&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;/caminho/do/seu/projeto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esse é o diretório onde está o seu notebook Jupyter e onde você quer usar o Poetry.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5&gt;&lt;strong&gt;3. Inicializar o projeto com o Poetry&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Rode:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;O &lt;code&gt;poetry init&lt;/code&gt; vai interagir com você, perguntando:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nome do pacote&lt;/li&gt;
+&lt;li&gt;Versão&lt;/li&gt;
+&lt;li&gt;Descrição&lt;/li&gt;
+&lt;li&gt;Autor&lt;/li&gt;
+&lt;li&gt;Versão do Python (ex: &lt;code&gt;^3.10&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Dependências&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Você pode simplesmente apertar &lt;code&gt;Enter&lt;/code&gt; para aceitar os padrões e editar depois no &lt;code&gt;pyproject.toml&lt;/code&gt;.
+Ou apenas usar o &lt;code&gt;poetry add &amp;lt;pacote&amp;gt;&lt;/code&gt; explicado abaixo&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5&gt;&lt;strong&gt;4. Criar o ambiente virtual e instalar dependências&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Após gerar o &lt;code&gt;pyproject.toml&lt;/code&gt;, você pode instalar dependências com:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ou adicionar uma específica, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pandas&lt;span class="w"&gt; &lt;/span&gt;jupyter&lt;span class="w"&gt; &lt;/span&gt;matplotlib
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Isso criará um ambiente virtual isolado com tudo que você precisa.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5&gt;&lt;strong&gt;5. Ativar o ambiente virtual do Poetry no Jupyter&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Para que o Jupyter reconheça o ambiente virtual do Poetry como um &lt;em&gt;kernel&lt;/em&gt;, você deve:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;ipykernel&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;--name&lt;span class="o"&gt;=&lt;/span&gt;nome_do_projeto&lt;span class="w"&gt; &lt;/span&gt;--display-name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Python (projeto)&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Depois disso, ao abrir seu Jupyter Notebook, você poderá selecionar o kernel &lt;strong&gt;"Python (projeto)"&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5&gt;&lt;strong&gt;6. Rodar o Jupyter a partir do Poetry (opcional)&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Se quiser rodar o Jupyter dentro do ambiente do Poetry:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;jupyter&lt;span class="w"&gt; &lt;/span&gt;notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ou:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;jupyter&lt;span class="w"&gt; &lt;/span&gt;lab
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h5&gt;Resultado&lt;/h5&gt;
+&lt;p&gt;Seu projeto agora está com:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Um ambiente isolado via Poetry&lt;/li&gt;
+&lt;li&gt;Dependências gerenciadas com &lt;code&gt;pyproject.toml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Um kernel próprio visível no Jupyter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Onde Salvar as Senhas</title><link href="polyglotdata.com/.env-python.html" rel="alternate"/><published>2025-10-27T00:00:00-03:00</published><updated>2025-10-27T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-27:polyglotdata.com/.env-python.html</id><summary type="html">&lt;p&gt;Organização básica de onde armazenar as senhas utilizadas na manipulação de dados ( .env )&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Variáveis de Ambiente .env&lt;/h4&gt;
+&lt;p&gt;Ao trabalhar com dados, muitas vezes esses são de acesso restrito, sendo necessário utilizar alguma credencial específica para acessar determinada fonte de dados. É muito importante armazenar essas senhas em um arquivo especial, quando estamos trabalhando localmente, para aumentar a segurança a medida que esses arquivos em nossa máquina começam a ter que ir para outro ambiente, seja no ambiente de produção, na máquina de um colega ou até mesmo em alguma ferramente de gerencialmente de versão de código como o GitHub.&lt;/p&gt;
+&lt;p&gt;Para isso vamos usar o .env, dentro do python.&lt;/p&gt;
+&lt;h5&gt;Na raiz do programa, vamos criar um arquivo .env&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;.env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5&gt;Dentro desse arquivo iremos inserir as diversas credenciais que iremos utilizar no código segue um exemplo&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;DATABASE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;insira aqui o nome do banco de dados&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;USER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;insira aqui o usuario utilizado para conectar on banco de dados&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;PASSWORD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;insira aqui a senha utilizada para, o usuario informado, conectar no banco de dados&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;HOST&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;insira aqui o nome do servidor onde esta a base de dados&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;TOPIC_PATH_SUB_GOOGLE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;caminho do topico para acesso acessar o google via codigo&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;SERVICE_ACCOUNT_BRAZIL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; local onde está armazenado localmente o arquivo json com as credenciais para acessar o google &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5&gt;Agora de dentro do programa em python, vamos carregar os dados do arquivo .env para utilizar as credenciais para conexao a fonte de dados&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;dotenv&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;load_dotenv&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sqlalchemy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;create_engine&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sqlalchemy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Vamos carregar o arquivo local .env para memoria, porem desconsiderando container ou qualquer complexidade de ambiente&lt;/span&gt;
+
+&lt;span class="n"&gt;load_dotenv&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;Conecta_sqlalchemy_mysql&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+
+
+    &lt;span class="n"&gt;database&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;DATABASE&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;USER&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;PASSWORD&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;host&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;HOST&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3306&lt;/span&gt;
+
+    &lt;span class="n"&gt;engine&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;create_engine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mysql+pymysql://&lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;:&lt;/span&gt;&lt;span class="si"&gt;{1}&lt;/span&gt;&lt;span class="s2"&gt;@&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s2"&gt;:&lt;/span&gt;&lt;span class="si"&gt;{3}&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;database&lt;/span&gt;
+        &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;con&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="n"&gt;Conecta_sqlalchemy_mysql&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;sql&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;select id, Membro, Nome, Idade, Peso from NomeTabela;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;objResult&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Neste exemplo implementamos codigos a mais, que serão explicados em outro momento. Mas por hora será utlil entender o funcionamento do arquivo .env&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Programação em Dados com Python</title><link href="polyglotdata.com/programacao-python.html" rel="alternate"/><published>2025-10-26T00:00:00-03:00</published><updated>2025-10-26T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-26:polyglotdata.com/programacao-python.html</id><summary type="html">&lt;p&gt;Manipulações básicas e mais comuns com dados no Python&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Programação em Dados com Python&lt;/h2&gt;
+&lt;p&gt;Mãos a Obra. Vamos passar por alguns conceitos, detalhando os mesmos através de exemplos práticos de manipulação de dados.&lt;/p&gt;
+&lt;h5&gt;Manipulando arquivos CSV&lt;/h5&gt;
+&lt;h6&gt;Conceitos Basicos&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Carga dois Csv para o pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Manipula esses blocos de dados com pandas gerando apenas um resultado&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Faz algumas operações nesses dados dentro do pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Ao final volta a exportar um arquivo csv com os dados trabalhados, como resultado&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;É muito comum trabalhar com volumes grandes de dados, e tais dados estão muitas vezes em csv ou excel.
+Nesse exemplo iremos fazer algumas manipulações básicas e comuns.&lt;/p&gt;
+&lt;h4&gt;Lendo dados em Diversos Formatos&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Lendo dados no formato Json&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Lendo dados no formato CSV&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Lendo dados no format excel&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Transformando todos eles em um mesmo padrão, tratamento de tipo&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Unindo-os em um mesmo formato - Pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Salvando o resultado de nosso trabalho em um novo csv&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Trabalhando com dados no Formato Json&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Lendo dados no formato Json&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Manipulando dados no formato Json&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Serializando e Deserializando os dados Json&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Convertendo o Json para Pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;*Retornando o Pandas para Json e Persistindo em um arquivo o resultado&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Substituindo o Sql pela manipulação no Pandas&lt;/h4&gt;
+&lt;p&gt;Com um bom conhecimento da linguagem Sql podemos fazer muitos tratamentos e processamentos, na manipulação de dados. Porem em python, ganhamos a liberdade de conectar em fontes diferentes e trabalhar com esses dados em um local centralizado, logo o formato e localização da fonte de dados deixa de ser um problema. Porem esse conhecimento não descarta as vantagens de dominar a linguagem Sql, que existem processos e recursos que essa linguagem nos oferece que é simplesmente imbatível em vantagens.
+E não depender de fornecedor nem um apenas de sua criatividade e capacidade, é algo que inicialmente pode assustar mas destrava a liberdade para avançar muito.
+No início tudo é mais desafiador, mas com o tempo, a familiarização e o conhecimento torna fácil aquilo que era aparentemente difícil no inicio. 
+Dai a sugestão de investir na manipulação de dados via Python, nos tornamos independente de ferramentas de terceiro e o limite é estabelecido por uma linguagem de uso amplo no mercado, e que esta em constante avanço e atualizações.&lt;/p&gt;
+&lt;h5&gt;Manipulando dados com pandas*&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Lendo um exemplo de dados em csv para manipulação&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Iterando em blocos de dados do Pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Realizando pesquisas dentro de um bloco de dados dentro do Pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Salvando o resultado das manipulações de dados&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Manipulando dados cuja origem é um banco relacional ( read_sql )&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Conectando no banco de dados&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Lendo dados no banco de dados&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Tratamento de tipo na leitura de dados Sql para Pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Salvando os dados do banco de dados localmente, para evitar repetidas idas ao banco&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Manipulando dados com iteração com um banco relacional ( to_sql )&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Conectando no banco de dados&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Lendo dados no banco de dados&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Salvando os dados do banco de dados localmente, para evitar repetidas idas ao banco&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Inserindo dados no banco de dados a partir do pandas&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Atualizando dados no banco de dados a partir do pandas&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Programacao"/><category term="linguagem"/></entry></feed>
