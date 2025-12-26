@@ -397,7 +397,7 @@ poetry&lt;span class="w"&gt; &lt;/span&gt;install
 &lt;p&gt;Vamos ao código:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
 
-&lt;span class="c1"&gt;# Defini local onde esetão os dados&lt;/span&gt;
+&lt;span class="c1"&gt;# Defini local onde estão os dados&lt;/span&gt;
 &lt;span class="n"&gt;nomeArquivo01&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dados/listapessoas01.csv&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;nomeArquivo02&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dados/listapessoas02.csv&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;nomeArquivoSaida&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dados/listapessoasUnida.csv&amp;#39;&lt;/span&gt;
@@ -427,7 +427,7 @@ poetry&lt;span class="w"&gt; &lt;/span&gt;install
 &lt;p&gt;Vamos descrever sucintamente o que o codigo faz &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Defini local onde esetão os dados&lt;/p&gt;
+&lt;p&gt;Defini local onde estão os dados&lt;/p&gt;
 &lt;p&gt;Esse ponto simplesmente define os locais onde os arquivos estarão armazenados&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -445,11 +445,11 @@ poetry&lt;span class="w"&gt; &lt;/span&gt;install
 &lt;li&gt;
 &lt;p&gt;Faz a união de ambos arquivos baseado na chave &lt;/p&gt;
 &lt;p&gt;Esse é uma união simples entre os dois arquivos( DataFrames ) usando algumas regrinhas basicas:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Estou explicidamente definindo o &amp;quot;left_on&amp;quot; e &amp;quot;right_one&amp;quot; para tomar consciência que existe essa opção e os nomes das colunas poderiam ser um pouco diferentes.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;-&lt;/span&gt; Estou explicitamente definindo o &amp;quot;left_on&amp;quot; e &amp;quot;right_one&amp;quot; para tomar consciência que existe essa opção e os nomes das colunas poderiam ser um pouco diferentes.
 
-Estou usando um operação de junção &amp;quot;row=&amp;#39;left&amp;#39;&amp;quot; para tratar alguns casos especiais, onde no arquivo ( DataFrame ) da esquerda podem ter mais linhas que o da direita, e mesmo assim traria sempre o resultado, nesse nosso exemplo garantindo que do lado esquerdo(&amp;#39;left&amp;#39;), traga todas as linhas independente se ela existir no que esta no arquivo ( DataFrame ) da direita
+&lt;span class="k"&gt;-&lt;/span&gt; Estou usando um operação de junção &amp;quot;row=&amp;#39;left&amp;#39;&amp;quot; para tratar alguns casos especiais, onde no arquivo ( DataFrame ) da esquerda podem ter mais linhas que o da direita, e mesmo assim traria sempre o resultado, nesse nosso exemplo garantindo que do lado esquerdo(&amp;#39;left&amp;#39;), traga todas as linhas independente se ela existir no que esta no arquivo ( DataFrame ) da direita
 
-Acrescentamos o operador &amp;quot;indicator=True&amp;quot; para incluir uma nova coluna chamada &amp;quot;_merge&amp;quot;, no resultado final. No resultado poderá aparecer [&amp;quot;both&amp;quot;,&amp;quot;only_left&amp;quot;]. Onde o &amp;quot;both&amp;quot; indica que existem dados em ambos arquivos, e o &amp;quot;only_left&amp;quot; que o dado somente existe no arquivo1
+&lt;span class="k"&gt;-&lt;/span&gt; Acrescentamos o operador &amp;quot;indicator=True&amp;quot; para incluir uma nova coluna chamada &amp;quot;_merge&amp;quot;, no resultado final. No resultado poderá aparecer [&amp;quot;both&amp;quot;,&amp;quot;only_left&amp;quot;]. Onde o &amp;quot;both&amp;quot; indica que existem dados em ambos arquivos, e o &amp;quot;only_left&amp;quot; que o dado somente existe no arquivo1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;

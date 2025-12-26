@@ -97,7 +97,7 @@ poetry<span class="w"> </span>install
 <p>Vamos ao código:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="c1"># Defini local onde esetão os dados</span>
+<span class="c1"># Defini local onde estão os dados</span>
 <span class="n">nomeArquivo01</span> <span class="o">=</span> <span class="s1">&#39;dados/listapessoas01.csv&#39;</span>
 <span class="n">nomeArquivo02</span> <span class="o">=</span> <span class="s1">&#39;dados/listapessoas02.csv&#39;</span>
 <span class="n">nomeArquivoSaida</span> <span class="o">=</span> <span class="s1">&#39;dados/listapessoasUnida.csv&#39;</span>
@@ -127,7 +127,7 @@ poetry<span class="w"> </span>install
 <p>Vamos descrever sucintamente o que o codigo faz </p>
 <ul>
 <li>
-<p>Defini local onde esetão os dados</p>
+<p>Defini local onde estão os dados</p>
 <p>Esse ponto simplesmente define os locais onde os arquivos estarão armazenados</p>
 </li>
 <li>
@@ -145,11 +145,11 @@ poetry<span class="w"> </span>install
 <li>
 <p>Faz a união de ambos arquivos baseado na chave </p>
 <p>Esse é uma união simples entre os dois arquivos( DataFrames ) usando algumas regrinhas basicas:</p>
-<div class="highlight"><pre><span></span><code>Estou explicidamente definindo o &quot;left_on&quot; e &quot;right_one&quot; para tomar consciência que existe essa opção e os nomes das colunas poderiam ser um pouco diferentes.
+<div class="highlight"><pre><span></span><code><span class="k">-</span> Estou explicitamente definindo o &quot;left_on&quot; e &quot;right_one&quot; para tomar consciência que existe essa opção e os nomes das colunas poderiam ser um pouco diferentes.
 
-Estou usando um operação de junção &quot;row=&#39;left&#39;&quot; para tratar alguns casos especiais, onde no arquivo ( DataFrame ) da esquerda podem ter mais linhas que o da direita, e mesmo assim traria sempre o resultado, nesse nosso exemplo garantindo que do lado esquerdo(&#39;left&#39;), traga todas as linhas independente se ela existir no que esta no arquivo ( DataFrame ) da direita
+<span class="k">-</span> Estou usando um operação de junção &quot;row=&#39;left&#39;&quot; para tratar alguns casos especiais, onde no arquivo ( DataFrame ) da esquerda podem ter mais linhas que o da direita, e mesmo assim traria sempre o resultado, nesse nosso exemplo garantindo que do lado esquerdo(&#39;left&#39;), traga todas as linhas independente se ela existir no que esta no arquivo ( DataFrame ) da direita
 
-Acrescentamos o operador &quot;indicator=True&quot; para incluir uma nova coluna chamada &quot;_merge&quot;, no resultado final. No resultado poderá aparecer [&quot;both&quot;,&quot;only_left&quot;]. Onde o &quot;both&quot; indica que existem dados em ambos arquivos, e o &quot;only_left&quot; que o dado somente existe no arquivo1
+<span class="k">-</span> Acrescentamos o operador &quot;indicator=True&quot; para incluir uma nova coluna chamada &quot;_merge&quot;, no resultado final. No resultado poderá aparecer [&quot;both&quot;,&quot;only_left&quot;]. Onde o &quot;both&quot; indica que existem dados em ambos arquivos, e o &quot;only_left&quot; que o dado somente existe no arquivo1
 </code></pre></div>
 
 </li>
