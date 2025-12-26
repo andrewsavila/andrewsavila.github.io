@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="polyglotdata.com/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="polyglotdata.com/theme/css/custom.css" media="screen">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -17,17 +17,18 @@
 
 <meta name="keywords" content="linguagem, Programacao, " />
 
-<meta property="og:title" content="Ferramento para Codificar em Python "/>
-<meta property="og:url" content="./ide-estrutura-codigo-python.html" />
+<meta property="og:title" content="Configurando e Entendendo o Ambiente de Trabalho em Dados "/>
+<meta property="og:url" content="polyglotdata.com/programacao/ambiente-trabalho.html" />
 <meta property="og:description" content="Apresentação e Estrutura simplificada para trabalhar nas ferramentas de codificação em Python" />
 <meta property="og:site_name" content="PolyglotData" />
 <meta property="og:article:author" content="Andre Souza" />
 <meta property="og:article:published_time" content="2025-10-29T00:00:00-03:00" />
-<meta name="twitter:title" content="Ferramento para Codificar em Python ">
+<meta name="twitter:title" content="Configurando e Entendendo o Ambiente de Trabalho em Dados ">
 <meta name="twitter:description" content="Apresentação e Estrutura simplificada para trabalhar nas ferramentas de codificação em Python">
 
-        <title>Ferramento para Codificar em Python  · PolyglotData
+        <title>Configurando e Entendendo o Ambiente de Trabalho em Dados  · PolyglotData
 </title>
+        <link href="polyglotdata.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PolyglotData - Full Atom Feed" />
 
 
 
@@ -42,18 +43,19 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="./"><span class=site-name>PolyglotData</span></a>
+                        <a class="brand" href="polyglotdata.com/"><span class=site-name>PolyglotData</span></a>
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right top-menu">
                                 <li >
                                     <a href=
-                                       .
+                                       polyglotdata.com
                                     >Home</a>
                                 </li>
-                                <li ><a href="./categories.html">Categories</a></li>
-                                <li ><a href="./tags.html">Tags</a></li>
-                                <li ><a href="./archives.html">Archives</a></li>
-                                <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                                <li ><a href="polyglotdata.com/contato.html">Contato</a></li>
+                                <li ><a href="polyglotdata.com/categories.html">Categories</a></li>
+                                <li ><a href="polyglotdata.com/tags.html">Tags</a></li>
+                                <li ><a href="polyglotdata.com/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="polyglotdata.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                             </ul>
                         </div>
                     </div>
@@ -67,8 +69,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./ide-estrutura-codigo-python.html">
-                Ferramento para Codificar em Python
+            <a href="polyglotdata.com/programacao/ambiente-trabalho.html">
+                Configurando e Entendendo o Ambiente de Trabalho em Dados
             </a>
         </h1>
     </header>
@@ -77,7 +79,280 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h4>O que é feito em uma IDE</h4>
+            <h2>Criando um Ambiente de Trabalho em Dados</h2>
+<p>Para trabalhar com dados, individualmente, porem considerando que podemos tambem compartilhar o que fazemos com uma equipe exige a organização dos scripts de dados de forma que possamos reutiliza-lo futuramente ou até mesmo voltar a ele no futuro, de forma simples e rápida.</p>
+<p>Sendo assim vamos a construção de um “ambiente de trabalho padrão de dados”, não um projeto de software tradicional.
+Vamos evitar padrões de “produto Python” e focar em organização operacional, rastreabilidade e longevidade.</p>
+<h3>Como será nosso ambiente de trabalho</h3>
+<p>Linux/Ubuntu + Poetry + VS Code + Notebooks + Scripts de dados compartilhados em equipe</p>
+<h3>Objetivo do Setup</h3>
+<ul>
+<li>
+<p><em>Um único ambiente Poetry</em></p>
+</li>
+<li>
+<p><em>Usado por toda a equipe</em></p>
+</li>
+<li>
+<p><em>Para vários scripts e notebooks</em></p>
+</li>
+<li>
+<p>*Executados de forma esporádica e sob demanda</p>
+</li>
+<li>
+<p><em>Com código reutilizável</em></p>
+</li>
+<li>
+<p><em>Sem acoplamento a um “projeto fechado”</em></p>
+</li>
+</ul>
+<h3>Visão Geral da Arquitetura</h3>
+<ul>
+<li>
+<p><em>Poetry = gestão de dependências</em></p>
+</li>
+<li>
+<p><em>.venv local = isolamento</em></p>
+</li>
+<li>
+<p><em>VS Code = ambiente de execução</em></p>
+</li>
+<li>
+<p><em>Notebooks = exploração / análise</em></p>
+</li>
+<li>
+<p><em>Scripts Python = processamento reutilizável</em></p>
+</li>
+</ul>
+<hr>
+<h1><em>1.</em> Instalar o Poetry (1 vez por máquina)</h1>
+<p>No Linux / Ubuntu:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sSL<span class="w"> </span>https://install.python-poetry.org<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
+</code></pre></div>
+
+<p>Verifique:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>--version
+</code></pre></div>
+
+<p>📌 Cada membro da equipe instala localmente.
+📌 O projeto é quem define as dependências, não o sistema.</p>
+<hr>
+<h1><em>2.</em> Criar a pasta base do ambiente de dados</h1>
+<p>Essa pasta <strong>é o que será versionado e compartilhado</strong>.</p>
+<div class="highlight"><pre><span></span><code>data-workspace/
+</code></pre></div>
+
+<p>Entre nela:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>data-workspace
+</code></pre></div>
+
+<hr>
+<h1><em>3.</em> Inicializar o Poetry (modo controlado)</h1>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>init
+</code></pre></div>
+
+<p>Respostas <strong>recomendadas</strong>:</p>
+<ul>
+<li>Package name [meu-projeto] → <strong>notebook</strong></li>
+<li>Define dependencies interactively? → <strong>No</strong></li>
+<li>Define dev dependencies interactively? → <strong>No</strong></li>
+</ul>
+<p>📌 O objetivo é <strong>um <code>pyproject.toml</code> limpo e estável</strong>.</p>
+<hr>
+<h1><em>4.</em> Fixar o virtualenv dentro do projeto</h1>
+<p>Esse passo é <strong>fundamental para consistência no VS Code</strong>.</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>config<span class="w"> </span>virtualenvs.in-project<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+
+<h1><em>5.</em> Como iremos trabalhar com o notebook é essencial a instalação do ipykernel em nosso ambiente local</h1>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>add<span class="w"> </span>--group<span class="w"> </span>dev<span class="w"> </span>ipykernel
+</code></pre></div>
+
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install
+</code></pre></div>
+
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code>data-workspace/
+├── .venv/
+├── pyproject.toml
+├── poetry.lock
+</code></pre></div>
+
+<p>📌 Cada pessoa da equipe terá a mesma estrutura.
+📌 Nenhum kernel global necessário.</p>
+<hr>
+<h3><em>6.</em> Selecione explicitamente o interpretador Python para deixar o Ambiente Python com o Env local</h3>
+<p>No VS Code:</p>
+<ul>
+<li><code>Ctrl + Shift + P</code></li>
+<li>Digite: <strong>Python: Select Interpreter</strong></li>
+<li>Escolha:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>./.venv/bin/python
+</code></pre></div>
+
+<p>📌 Esse passo é <strong>obrigatório</strong>
+📌 Sem isso, o kernel nunca aparece</p>
+<p>Você pode validar abrindo um terminal integrado:</p>
+<div class="highlight"><pre><span></span><code>which<span class="w"> </span>python
+</code></pre></div>
+
+<h3>6.1 Ao selecionar o “Python: Select Interpreter”</h3>
+<p>Esse comando <strong>não resolve notebooks</strong> depois desse ponto.
+Agora você precisa atuar <strong>no contexto do Jupyter</strong>.</p>
+<hr>
+<h3>6.2 Clique em <strong>Select Kernel</strong> (no topo do notebook)</h3>
+<p>Fluxo correto:</p>
+<div class="highlight"><pre><span></span><code>Select Kernel
+  → Select Another Kernel
+      → Python Environments
+</code></pre></div>
+
+<ul>
+<li>📌 <strong>Esse caminho é essencial</strong></li>
+<li>📌 Não escolha “Existing Jupyter Server”</li>
+</ul>
+<hr>
+<h3>6.3 Agora escolha o Python da <code>.venv</code></h3>
+<p>Você deve ver algo parecido com:</p>
+<div class="highlight"><pre><span></span><code>Python 3.11.x (.venv)
+</code></pre></div>
+
+<p>ou</p>
+<div class="highlight"><pre><span></span><code>./.venv/bin/python
+</code></pre></div>
+
+<p>Selecione esse.</p>
+<ul>
+<li>✔️ A partir desse momento, o notebook fica vinculado</li>
+<li>✔️ Essa escolha fica salva no próprio <code>.ipynb</code></li>
+<li>✔️ Isso foi possivel pois logo acima foi adicionado o ipykernel pelo commando :<code>poetry add --group dev ipykernel</code></li>
+</ul>
+<h3>6.3 Agora que está tudo pronto. Vamos configurar um WorkSpace.</h3>
+<p>Isso irá facilitar muito a facilidade para reproduzir esse ambiente em outras maquinas e evitar qualquer problema na configuração</p>
+<p>Abaixo consta um exemplo, onde fazemos referencia a pastas criadas acima na inicialição do ambiente via Poetry, onde criamos um ambiente localmente dentro do contexto da página corrente de trabalho.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;folders&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;settings&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+        <span class="o">//</span> <span class="n">Python</span> <span class="o">/</span> <span class="n">Poetry</span>
+        <span class="s2">&quot;python.defaultInterpreterPath&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{workspaceFolder}</span><span class="s2">/.venv/bin/python&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;python.terminal.activateEnvironment&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+
+        <span class="o">//</span> <span class="n">Terminal</span>
+        <span class="s2">&quot;terminal.integrated.env.linux&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;PYTHONPATH&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{workspaceFolder}</span><span class="s2">&quot;</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div>
+
+<h1><em>7.</em> Estrutura de pastas (padrão da equipe)</h1>
+<div class="highlight"><pre><span></span><code>data-workspace/
+│
+├── pyproject.toml
+├── poetry.lock
+├── .venv/
+│
+├── notebooks/
+│   ├── exploracao/
+│   │   └── 01_exemplo.ipynb
+│   │
+│   └── processamento/
+│       └── 01_transformacao.ipynb
+│
+├── scripts/
+│   ├── comuns/
+│   │   ├── limpeza.py
+│   │   ├── datas.py
+│   │   └── io.py
+│   │
+│   └── especificos/
+│       └── segmento_x.py
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+└── README.md
+</code></pre></div>
+
+<ul>
+<li>📌 <strong>Notebooks não contêm lógica pesada</strong></li>
+<li>📌 Lógica reutilizável fica em <code>scripts/comuns</code></li>
+</ul>
+<hr>
+<h1><em>8.</em> Tornar os scripts reutilizáveis</h1>
+<p>Crie arquivos <code>__init__.py</code>:</p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>scripts/__init__.py
+touch<span class="w"> </span>scripts/comuns/__init__.py
+</code></pre></div>
+
+<p>Agora, em notebooks ou scripts:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">scripts.comuns.limpeza</span> <span class="kn">import</span> <span class="n">normalizar_colunas</span>
+</code></pre></div>
+
+<p>📌 Isso evita duplicação e caos futuro.</p>
+<hr>
+<h1>9 Adicionar dependências com Poetry</h1>
+<p>Sempre via Poetry:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>add<span class="w"> </span>pandas<span class="w"> </span>numpy<span class="w"> </span>sqlalchemy
+poetry<span class="w"> </span>add<span class="w"> </span>--group<span class="w"> </span>dev<span class="w"> </span>ipykernel
+</code></pre></div>
+
+<p>📌 Toda a equipe compartilha o mesmo <code>poetry.lock</code>.</p>
+<hr>
+<h1><em>10.</em> Configurar o VS Code (ponto-chave)</h1>
+<ol>
+<li>Abra a pasta <code>data-workspace</code> no VS Code</li>
+<li>Abra um notebook <code>.ipynb</code></li>
+<li>Clique em <strong>Select Kernel</strong></li>
+<li>Escolha:</li>
+</ol>
+<p><code>Python (.venv)</code></p>
+<ul>
+<li>📌 <strong>Nada mais é necessário</strong></li>
+<li>📌 O VS Code usa diretamente o Poetry</li>
+</ul>
+<hr>
+<h1><em>11.</em> Padrão de uso diário (time inteiro)</h1>
+<ul>
+<li>Novo notebook? → use <code>.venv</code></li>
+<li>Nova lib? → <code>poetry add</code></li>
+<li>Código reutilizável? → <code>scripts/comuns</code></li>
+<li>Código pontual? → <code>scripts/especificos</code></li>
+<li>Dados processados? → <code>data/processed</code></li>
+</ul>
+<hr>
+<h1><em>12.</em> Por que isso funciona no longo prazo</h1>
+<p>✔️ Um único ambiente
+✔️ Dependências versionadas
+✔️ Scripts antigos continuam rodando (até onde possível)
+✔️ Evolução controlada de bibliotecas
+✔️ Facilidade de onboarding
+✔️ Histórico claro do que foi feito</p>
+<p>📌 Quando uma lib precisa ser atualizada, <strong>toda a equipe evolui junto</strong>.</p>
+<hr>
+<h1>Conclusão objetiva</h1>
+<p>Você <strong>não está montando um projeto Python</strong>.
+Você está montando um <strong>ambiente de trabalho de dados profissional</strong>.</p>
+<p>O setup acima:</p>
+<ul>
+<li>Evita improviso</li>
+<li>Evita kernel global</li>
+<li>Evita perda de contexto</li>
+<li>Evita “scripts esquecidos”</li>
+</ul>
+<p>E, principalmente, <strong>escala com o tempo</strong>.</p>
+<hr>
+<h2>Conteúdo Antigo-Necessario Revisar</h2>
+<h4>O que é feito em uma IDE</h4>
 <p>É um termo muito usado na programação, e significa "Ambiente de Desenvolvimento Integrado", que é o local onde será usado a linguagem python para codificar o tratamento em dados. Materializarei aqui uma estrutura simples e básica, para organizar o código. Que se trata onde devo escrever o que, na codificação.</p>
 <p>O tratamento de dados será feito via programação com Python, por isso preciso ter um código de fácil manutenção.</p>
 <h4>Notebook &amp; Código padrão</h4>
@@ -135,11 +410,11 @@ E se trata de um simples código que trabalha com uma estrutura simples de dados
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2025-10-29T00:00:00-03:00">qua 29 outubro 2025</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#programacao-ref">Programacao</a>
+            <a class="category-link" href="polyglotdata.com/categories.html#programacao-ref">Programacao</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#linguagem-ref">linguagem
-                    <span class="superscript">5</span>
+                <li><a href="polyglotdata.com/tags.html#linguagem-ref">linguagem
+                    <span class="superscript">4</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
@@ -241,7 +516,7 @@ E se trata de um simples código que trabalha com uma estrutura simples de dados
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script src="polyglotdata.com/theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {

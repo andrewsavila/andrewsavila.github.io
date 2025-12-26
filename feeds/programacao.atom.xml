@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>PolyglotData - Programacao</title><link href="polyglotdata.com/" rel="alternate"/><link href="polyglotdata.com/feeds/programacao.atom.xml" rel="self"/><id>polyglotdata.com/</id><updated>2025-10-30T00:00:00-03:00</updated><entry><title>Manipulação de Dados com Python</title><link href="polyglotdata.com/intro-python.html" rel="alternate"/><published>2025-10-30T00:00:00-03:00</published><updated>2025-10-30T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-30:polyglotdata.com/intro-python.html</id><summary type="html">&lt;p&gt;Apresentação do Python para Dados&lt;/p&gt;</summary><content type="html">&lt;h5&gt;O que é Python&lt;/h5&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PolyglotData - Programacao</title><link href="polyglotdata.com/" rel="alternate"/><link href="polyglotdata.com/feeds/programacao.atom.xml" rel="self"/><id>polyglotdata.com/</id><updated>2025-10-30T00:00:00-03:00</updated><entry><title>Manipulação de Dados com Python</title><link href="polyglotdata.com/programacao/intro-python.html" rel="alternate"/><published>2025-10-30T00:00:00-03:00</published><updated>2025-10-30T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-30:polyglotdata.com/programacao/intro-python.html</id><summary type="html">&lt;p&gt;Apresentação do Python para Dados&lt;/p&gt;</summary><content type="html">&lt;h5&gt;O que é Python&lt;/h5&gt;
 &lt;p&gt;Python é uma linguagem poderosa e simples de aprender.&lt;br&gt;
 Vamos ver um exemplo básico:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;saudacao&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -17,7 +17,280 @@ Vamos ver um exemplo básico:&lt;/p&gt;
 &lt;h5&gt;Objetivo desse site&lt;/h5&gt;
 &lt;p&gt;Hoje em dia os modelos de IA, que nos responde baseado em Prompt é a melhor forma de aprender, logo surigo que procure essas ferramentas para aprofundar e entender as tecnologias que precisa.
 Esse site tem o objetivo, de unir de forma sintética inicialmente, os conhecimentos necessarios para manipulação de dados ,justificando o tema PlolyglotData. E cumpri outro objetivo que é pare eu aprender tambem, ao se escrever o que se aprendeu com exemplos, como se tivesse ensinando a alguem alguma coisa, o conhecimento sedimento de forma mais clara e real dentro de nossa inteligência. 
-E caso seja útil para alguem, esse meu trabalho de síntese, seja bem vindo.&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Ferramento para Codificar em Python</title><link href="polyglotdata.com/ide-estrutura-codigo-python.html" rel="alternate"/><published>2025-10-29T00:00:00-03:00</published><updated>2025-10-29T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-29:polyglotdata.com/ide-estrutura-codigo-python.html</id><summary type="html">&lt;p&gt;Apresentação e Estrutura simplificada para trabalhar nas ferramentas de codificação em Python&lt;/p&gt;</summary><content type="html">&lt;h4&gt;O que é feito em uma IDE&lt;/h4&gt;
+E caso seja útil para alguem, esse meu trabalho de síntese, seja bem vindo.&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Configurando e Entendendo o Ambiente de Trabalho em Dados</title><link href="polyglotdata.com/programacao/ambiente-trabalho.html" rel="alternate"/><published>2025-10-29T00:00:00-03:00</published><updated>2025-10-29T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-29:polyglotdata.com/programacao/ambiente-trabalho.html</id><summary type="html">&lt;p&gt;Apresentação e Estrutura simplificada para trabalhar nas ferramentas de codificação em Python&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Criando um Ambiente de Trabalho em Dados&lt;/h2&gt;
+&lt;p&gt;Para trabalhar com dados, individualmente, porem considerando que podemos tambem compartilhar o que fazemos com uma equipe exige a organização dos scripts de dados de forma que possamos reutiliza-lo futuramente ou até mesmo voltar a ele no futuro, de forma simples e rápida.&lt;/p&gt;
+&lt;p&gt;Sendo assim vamos a construção de um “ambiente de trabalho padrão de dados”, não um projeto de software tradicional.
+Vamos evitar padrões de “produto Python” e focar em organização operacional, rastreabilidade e longevidade.&lt;/p&gt;
+&lt;h3&gt;Como será nosso ambiente de trabalho&lt;/h3&gt;
+&lt;p&gt;Linux/Ubuntu + Poetry + VS Code + Notebooks + Scripts de dados compartilhados em equipe&lt;/p&gt;
+&lt;h3&gt;Objetivo do Setup&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Um único ambiente Poetry&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Usado por toda a equipe&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Para vários scripts e notebooks&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;*Executados de forma esporádica e sob demanda&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Com código reutilizável&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Sem acoplamento a um “projeto fechado”&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Visão Geral da Arquitetura&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Poetry = gestão de dependências&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;.venv local = isolamento&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;VS Code = ambiente de execução&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Notebooks = exploração / análise&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Scripts Python = processamento reutilizável&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;1.&lt;/em&gt; Instalar o Poetry (1 vez por máquina)&lt;/h1&gt;
+&lt;p&gt;No Linux / Ubuntu:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-sSL&lt;span class="w"&gt; &lt;/span&gt;https://install.python-poetry.org&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Verifique:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;--version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;📌 Cada membro da equipe instala localmente.
+📌 O projeto é quem define as dependências, não o sistema.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;2.&lt;/em&gt; Criar a pasta base do ambiente de dados&lt;/h1&gt;
+&lt;p&gt;Essa pasta &lt;strong&gt;é o que será versionado e compartilhado&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;data-workspace/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Entre nela:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;data-workspace
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;3.&lt;/em&gt; Inicializar o Poetry (modo controlado)&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Respostas &lt;strong&gt;recomendadas&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Package name [meu-projeto] → &lt;strong&gt;notebook&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Define dependencies interactively? → &lt;strong&gt;No&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Define dev dependencies interactively? → &lt;strong&gt;No&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📌 O objetivo é &lt;strong&gt;um &lt;code&gt;pyproject.toml&lt;/code&gt; limpo e estável&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;4.&lt;/em&gt; Fixar o virtualenv dentro do projeto&lt;/h1&gt;
+&lt;p&gt;Esse passo é &lt;strong&gt;fundamental para consistência no VS Code&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;virtualenvs.in-project&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;&lt;em&gt;5.&lt;/em&gt; Como iremos trabalhar com o notebook é essencial a instalação do ipykernel em nosso ambiente local&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;dev&lt;span class="w"&gt; &lt;/span&gt;ipykernel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Depois:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Resultado:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;data-workspace/
+├── .venv/
+├── pyproject.toml
+├── poetry.lock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;📌 Cada pessoa da equipe terá a mesma estrutura.
+📌 Nenhum kernel global necessário.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;em&gt;6.&lt;/em&gt; Selecione explicitamente o interpretador Python para deixar o Ambiente Python com o Env local&lt;/h3&gt;
+&lt;p&gt;No VS Code:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Shift + P&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Digite: &lt;strong&gt;Python: Select Interpreter&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Escolha:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./.venv/bin/python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;📌 Esse passo é &lt;strong&gt;obrigatório&lt;/strong&gt;
+📌 Sem isso, o kernel nunca aparece&lt;/p&gt;
+&lt;p&gt;Você pode validar abrindo um terminal integrado:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;which&lt;span class="w"&gt; &lt;/span&gt;python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;6.1 Ao selecionar o “Python: Select Interpreter”&lt;/h3&gt;
+&lt;p&gt;Esse comando &lt;strong&gt;não resolve notebooks&lt;/strong&gt; depois desse ponto.
+Agora você precisa atuar &lt;strong&gt;no contexto do Jupyter&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;6.2 Clique em &lt;strong&gt;Select Kernel&lt;/strong&gt; (no topo do notebook)&lt;/h3&gt;
+&lt;p&gt;Fluxo correto:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Select Kernel
+  → Select Another Kernel
+      → Python Environments
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;📌 &lt;strong&gt;Esse caminho é essencial&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;📌 Não escolha “Existing Jupyter Server”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;6.3 Agora escolha o Python da &lt;code&gt;.venv&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Você deve ver algo parecido com:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Python 3.11.x (.venv)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ou&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./.venv/bin/python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Selecione esse.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✔️ A partir desse momento, o notebook fica vinculado&lt;/li&gt;
+&lt;li&gt;✔️ Essa escolha fica salva no próprio &lt;code&gt;.ipynb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;✔️ Isso foi possivel pois logo acima foi adicionado o ipykernel pelo commando :&lt;code&gt;poetry add --group dev ipykernel&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;6.3 Agora que está tudo pronto. Vamos configurar um WorkSpace.&lt;/h3&gt;
+&lt;p&gt;Isso irá facilitar muito a facilidade para reproduzir esse ambiente em outras maquinas e evitar qualquer problema na configuração&lt;/p&gt;
+&lt;p&gt;Abaixo consta um exemplo, onde fazemos referencia a pastas criadas acima na inicialição do ambiente via Poetry, onde criamos um ambiente localmente dentro do contexto da página corrente de trabalho.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;folders&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="s2"&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;settings&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+        &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;Poetry&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;python.defaultInterpreterPath&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$&lt;/span&gt;&lt;span class="si"&gt;{workspaceFolder}&lt;/span&gt;&lt;span class="s2"&gt;/.venv/bin/python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;python.terminal.activateEnvironment&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+        &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;Terminal&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;terminal.integrated.env.linux&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;PYTHONPATH&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$&lt;/span&gt;&lt;span class="si"&gt;{workspaceFolder}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;&lt;em&gt;7.&lt;/em&gt; Estrutura de pastas (padrão da equipe)&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;data-workspace/
+│
+├── pyproject.toml
+├── poetry.lock
+├── .venv/
+│
+├── notebooks/
+│   ├── exploracao/
+│   │   └── 01_exemplo.ipynb
+│   │
+│   └── processamento/
+│       └── 01_transformacao.ipynb
+│
+├── scripts/
+│   ├── comuns/
+│   │   ├── limpeza.py
+│   │   ├── datas.py
+│   │   └── io.py
+│   │
+│   └── especificos/
+│       └── segmento_x.py
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+└── README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;📌 &lt;strong&gt;Notebooks não contêm lógica pesada&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;📌 Lógica reutilizável fica em &lt;code&gt;scripts/comuns&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;8.&lt;/em&gt; Tornar os scripts reutilizáveis&lt;/h1&gt;
+&lt;p&gt;Crie arquivos &lt;code&gt;__init__.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;touch&lt;span class="w"&gt; &lt;/span&gt;scripts/__init__.py
+touch&lt;span class="w"&gt; &lt;/span&gt;scripts/comuns/__init__.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Agora, em notebooks ou scripts:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scripts.comuns.limpeza&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;normalizar_colunas&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;📌 Isso evita duplicação e caos futuro.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;9 Adicionar dependências com Poetry&lt;/h1&gt;
+&lt;p&gt;Sempre via Poetry:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pandas&lt;span class="w"&gt; &lt;/span&gt;numpy&lt;span class="w"&gt; &lt;/span&gt;sqlalchemy
+poetry&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;dev&lt;span class="w"&gt; &lt;/span&gt;ipykernel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;📌 Toda a equipe compartilha o mesmo &lt;code&gt;poetry.lock&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;10.&lt;/em&gt; Configurar o VS Code (ponto-chave)&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Abra a pasta &lt;code&gt;data-workspace&lt;/code&gt; no VS Code&lt;/li&gt;
+&lt;li&gt;Abra um notebook &lt;code&gt;.ipynb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Clique em &lt;strong&gt;Select Kernel&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Escolha:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;Python (.venv)&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📌 &lt;strong&gt;Nada mais é necessário&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;📌 O VS Code usa diretamente o Poetry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;11.&lt;/em&gt; Padrão de uso diário (time inteiro)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Novo notebook? → use &lt;code&gt;.venv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Nova lib? → &lt;code&gt;poetry add&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Código reutilizável? → &lt;code&gt;scripts/comuns&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Código pontual? → &lt;code&gt;scripts/especificos&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Dados processados? → &lt;code&gt;data/processed&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;&lt;em&gt;12.&lt;/em&gt; Por que isso funciona no longo prazo&lt;/h1&gt;
+&lt;p&gt;✔️ Um único ambiente
+✔️ Dependências versionadas
+✔️ Scripts antigos continuam rodando (até onde possível)
+✔️ Evolução controlada de bibliotecas
+✔️ Facilidade de onboarding
+✔️ Histórico claro do que foi feito&lt;/p&gt;
+&lt;p&gt;📌 Quando uma lib precisa ser atualizada, &lt;strong&gt;toda a equipe evolui junto&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Conclusão objetiva&lt;/h1&gt;
+&lt;p&gt;Você &lt;strong&gt;não está montando um projeto Python&lt;/strong&gt;.
+Você está montando um &lt;strong&gt;ambiente de trabalho de dados profissional&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O setup acima:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Evita improviso&lt;/li&gt;
+&lt;li&gt;Evita kernel global&lt;/li&gt;
+&lt;li&gt;Evita perda de contexto&lt;/li&gt;
+&lt;li&gt;Evita “scripts esquecidos”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;E, principalmente, &lt;strong&gt;escala com o tempo&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Conteúdo Antigo-Necessario Revisar&lt;/h2&gt;
+&lt;h4&gt;O que é feito em uma IDE&lt;/h4&gt;
 &lt;p&gt;É um termo muito usado na programação, e significa "Ambiente de Desenvolvimento Integrado", que é o local onde será usado a linguagem python para codificar o tratamento em dados. Materializarei aqui uma estrutura simples e básica, para organizar o código. Que se trata onde devo escrever o que, na codificação.&lt;/p&gt;
 &lt;p&gt;O tratamento de dados será feito via programação com Python, por isso preciso ter um código de fácil manutenção.&lt;/p&gt;
 &lt;h4&gt;Notebook &amp;amp; Código padrão&lt;/h4&gt;
@@ -54,80 +327,7 @@ E se trata de um simples código que trabalha com uma estrutura simples de dados
 
 &lt;h5&gt;Codificação Tracicional&lt;/h5&gt;
 &lt;p&gt;Arquivos com extensão ".py"&lt;/p&gt;
-&lt;p&gt;O código acima é exatamente o mesmo com a diferença que não irá precisar do pacote ipykernel, porem a forma de execução e estrutura da documentação é diferente de um notebook&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Pacotes do Python</title><link href="polyglotdata.com/pacotes-codigo-python.html" rel="alternate"/><published>2025-10-28T00:00:00-03:00</published><updated>2025-10-28T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-28:polyglotdata.com/pacotes-codigo-python.html</id><summary type="html">&lt;p&gt;Introdução breve para iniciar com os pacotes do Python que iremos usar em nosso trabalho&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Ambiente Virtual&lt;/h4&gt;
-&lt;p&gt;É muito comum na programação em python, trabalhar com um ambiente isolado, o que chamamos de ambiente virtual. Para não se misturar as configurações desse ambiente de trabalho com os demais itens do computador de trabalho pessoal.&lt;/p&gt;
-&lt;p&gt;E alem disso, podemos trabalhar em equipe sendo necessário compartilhar nosso ambiente com outros da equipe, as dependência para conexão de dados e até bibliotecas especificas para o trabalho padronizado, irá exigir um ambiente controlado em termos de versionamento do que estamos usando no momento.&lt;/p&gt;
-&lt;p&gt;O Poetry nos ajudará nisso&lt;/p&gt;
-&lt;h4&gt;Inclusão de Pacotes&lt;/h4&gt;
-&lt;p&gt;Durante o trabalho de manipulação de dados, vamos utilizar uma grande quantidade de pacotes construidos por terceiros. E tais pacotes podem ser instalados de várias formas, nesse exemplo vamos nos ater a forma de instalação usando o poetry.&lt;/p&gt;
-&lt;h4&gt;Gerenciador de Pacotes python Poetry&lt;/h4&gt;
-&lt;hr&gt;
-&lt;h5&gt;&lt;strong&gt;1. Instalar o Poetry (caso ainda não tenha)&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Se você ainda não instalou o Poetry, execute no terminal:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-sSL&lt;span class="w"&gt; &lt;/span&gt;https://install.python-poetry.org&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Depois, adicione o caminho à sua shell (caso necessário). Ou reinicie o terminal.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h5&gt;&lt;strong&gt;2. Ir para o diretório do seu projeto&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;/caminho/do/seu/projeto
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Esse é o diretório onde está o seu notebook Jupyter e onde você quer usar o Poetry.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h5&gt;&lt;strong&gt;3. Inicializar o projeto com o Poetry&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Rode:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;init
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;O &lt;code&gt;poetry init&lt;/code&gt; vai interagir com você, perguntando:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Nome do pacote&lt;/li&gt;
-&lt;li&gt;Versão&lt;/li&gt;
-&lt;li&gt;Descrição&lt;/li&gt;
-&lt;li&gt;Autor&lt;/li&gt;
-&lt;li&gt;Versão do Python (ex: &lt;code&gt;^3.10&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Dependências&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Você pode simplesmente apertar &lt;code&gt;Enter&lt;/code&gt; para aceitar os padrões e editar depois no &lt;code&gt;pyproject.toml&lt;/code&gt;.
-Ou apenas usar o &lt;code&gt;poetry add &amp;lt;pacote&amp;gt;&lt;/code&gt; explicado abaixo&lt;/p&gt;
-&lt;hr&gt;
-&lt;h5&gt;&lt;strong&gt;4. Criar o ambiente virtual e instalar dependências&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Após gerar o &lt;code&gt;pyproject.toml&lt;/code&gt;, você pode instalar dependências com:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ou adicionar uma específica, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pandas&lt;span class="w"&gt; &lt;/span&gt;jupyter&lt;span class="w"&gt; &lt;/span&gt;matplotlib
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Isso criará um ambiente virtual isolado com tudo que você precisa.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h5&gt;&lt;strong&gt;5. Ativar o ambiente virtual do Poetry no Jupyter&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Para que o Jupyter reconheça o ambiente virtual do Poetry como um &lt;em&gt;kernel&lt;/em&gt;, você deve:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;ipykernel&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;--name&lt;span class="o"&gt;=&lt;/span&gt;nome_do_projeto&lt;span class="w"&gt; &lt;/span&gt;--display-name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Python (projeto)&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Depois disso, ao abrir seu Jupyter Notebook, você poderá selecionar o kernel &lt;strong&gt;"Python (projeto)"&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h5&gt;&lt;strong&gt;6. Rodar o Jupyter a partir do Poetry (opcional)&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Se quiser rodar o Jupyter dentro do ambiente do Poetry:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;jupyter&lt;span class="w"&gt; &lt;/span&gt;notebook
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ou:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;jupyter&lt;span class="w"&gt; &lt;/span&gt;lab
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr&gt;
-&lt;h5&gt;Resultado&lt;/h5&gt;
-&lt;p&gt;Seu projeto agora está com:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Um ambiente isolado via Poetry&lt;/li&gt;
-&lt;li&gt;Dependências gerenciadas com &lt;code&gt;pyproject.toml&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Um kernel próprio visível no Jupyter&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Onde Salvar as Senhas</title><link href="polyglotdata.com/.env-python.html" rel="alternate"/><published>2025-10-27T00:00:00-03:00</published><updated>2025-10-27T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-27:polyglotdata.com/.env-python.html</id><summary type="html">&lt;p&gt;Organização básica de onde armazenar as senhas utilizadas na manipulação de dados ( .env )&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Variáveis de Ambiente .env&lt;/h4&gt;
+&lt;p&gt;O código acima é exatamente o mesmo com a diferença que não irá precisar do pacote ipykernel, porem a forma de execução e estrutura da documentação é diferente de um notebook&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Onde Salvar as Senhas</title><link href="polyglotdata.com/programacao/.env-python.html" rel="alternate"/><published>2025-10-27T00:00:00-03:00</published><updated>2025-10-27T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-27:polyglotdata.com/programacao/.env-python.html</id><summary type="html">&lt;p&gt;Organização básica de onde armazenar as senhas utilizadas na manipulação de dados ( .env )&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Variáveis de Ambiente .env&lt;/h4&gt;
 &lt;p&gt;Ao trabalhar com dados, muitas vezes esses são de acesso restrito, sendo necessário utilizar alguma credencial específica para acessar determinada fonte de dados. É muito importante armazenar essas senhas em um arquivo especial, quando estamos trabalhando localmente, para aumentar a segurança a medida que esses arquivos em nossa máquina começam a ter que ir para outro ambiente, seja no ambiente de produção, na máquina de um colega ou até mesmo em alguma ferramente de gerencialmente de versão de código como o GitHub.&lt;/p&gt;
 &lt;p&gt;Para isso vamos usar o .env, dentro do python.&lt;/p&gt;
 &lt;h5&gt;Na raiz do programa, vamos criar um arquivo .env&lt;/h5&gt;
@@ -179,15 +379,88 @@ Ou apenas usar o &lt;code&gt;poetry add &amp;lt;pacote&amp;gt;&lt;/code&gt; expl
 &lt;span class="n"&gt;objResult&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Neste exemplo implementamos codigos a mais, que serão explicados em outro momento. Mas por hora será utlil entender o funcionamento do arquivo .env&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Programação em Dados com Python</title><link href="polyglotdata.com/programacao-python.html" rel="alternate"/><published>2025-10-26T00:00:00-03:00</published><updated>2025-10-26T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-26:polyglotdata.com/programacao-python.html</id><summary type="html">&lt;p&gt;Manipulações básicas e mais comuns com dados no Python&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Programação em Dados com Python&lt;/h2&gt;
+&lt;p&gt;Neste exemplo implementamos codigos a mais, que serão explicados em outro momento. Mas por hora será utlil entender o funcionamento do arquivo .env&lt;/p&gt;</content><category term="Programacao"/><category term="linguagem"/></entry><entry><title>Programação em Dados com Python</title><link href="polyglotdata.com/programacao/programacao-python.html" rel="alternate"/><published>2025-10-26T00:00:00-03:00</published><updated>2025-10-26T00:00:00-03:00</updated><author><name>Andre Souza</name></author><id>tag:None,2025-10-26:polyglotdata.com/programacao/programacao-python.html</id><summary type="html">&lt;p&gt;Manipulações básicas e mais comuns com dados no Python&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Programação em Dados com Python&lt;/h2&gt;
 &lt;p&gt;Mãos a Obra. Vamos passar por alguns conceitos, detalhando os mesmos através de exemplos práticos de manipulação de dados.&lt;/p&gt;
-&lt;h5&gt;Manipulando arquivos CSV&lt;/h5&gt;
-&lt;h6&gt;Conceitos Basicos&lt;/h6&gt;
+&lt;p&gt;Se efetivamente quiser reproduzir o que está listado abaixo será essencial, ter preparado o ambiente, o que foi descrito na seção:
+&lt;a href="polyglotdata.com/programacao/ambiente-trabalho.html" target="_blank"&gt;Configurando e Entendendo o Ambiente de Trabalho em Dados&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Considerando isso alguns pontos são essenciais, recordar do ambiente de trabalho. Estamos usando o poetry, criamos um ambiente limpo, por isso
+iremos sempre instalar o pacote e atualizar o ambiente virtual local.&lt;/p&gt;
+&lt;p&gt;Importante seu Vs Code esta configurado para ao abrir um terminal, ele já abra dentro do contexto do ambiente virtual do poetry, para as dependendencias serem instaladas corretamente.&lt;/p&gt;
+&lt;h4&gt;Manipulando arquivos CSV&lt;/h4&gt;
+&lt;h5&gt;Conceitos Basicos&lt;/h5&gt;
+&lt;h6&gt;Incluindo novas dependencias&lt;/h6&gt;
+&lt;p&gt;Nosso ambiente iniciou sem nem um pacote, que usaremos na programação, instalado. Dai antes de começar vamos adicionar o novo pacote que iremos usar nesse exemplo. Como comentado acima, essencial estarmos em nosso ambiente selecionado, o ambiente virtual do Poetry.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pandas&lt;span class="w"&gt; &lt;/span&gt;
+poetry&lt;span class="w"&gt; &lt;/span&gt;install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Vamos ao código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Defini local onde esetão os dados&lt;/span&gt;
+&lt;span class="n"&gt;nomeArquivo01&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dados/listapessoas01.csv&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;nomeArquivo02&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dados/listapessoas02.csv&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;nomeArquivoSaida&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dados/listapessoasUnida.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Carrega os dados para o DataFrame do Pandas&lt;/span&gt;
+&lt;span class="n"&gt;dfPrimeiroBloco&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nomeArquivo01&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;dfSegundoBloco&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nomeArquivo02&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Garante padronização dos tipos de dados que serão usados para união dos arquivos&lt;/span&gt;
+&lt;span class="n"&gt;dfPrimeiroBloco&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;codigo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dfPrimeiroBloco&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;codigo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;int64&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;dfSegundoBloco&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;codigo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dfSegundoBloco&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;codigo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;int64&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Verifica se os tipos de dados estão compatives&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dfPrimeiroBloco&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;codigo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dtypes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;tipo de dado da coluna &amp;quot;codigo&amp;quot; do primeiro arquivo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dfSegundoBloco&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;codigo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dtypes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;tipo de dado da coluna &amp;quot;codigo&amp;quot; do segundo arquivo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Faz a união de ambos arquivos baseado na chave &lt;/span&gt;
+&lt;span class="n"&gt;dfUniao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dfPrimeiroBloco&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dfSegundoBloco&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;left_on&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;codigo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;right_on&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;codigo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;indicator&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Simples manipulação de dados no Pandas&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dfUniao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Nome.str.contains(&amp;quot;maria&amp;quot;,case=False)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;    
+
+&lt;span class="c1"&gt;# Os dois arquivos estão unidos nesse ponto já, dentro do dataframe. Agora vamos converter o resultado para um novo csv&lt;/span&gt;
+&lt;span class="n"&gt;dfUniao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nomeArquivoSaida&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Vamos descrever sucintamente o que o codigo faz &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Carga dois Csv para o pandas&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Manipula esses blocos de dados com pandas gerando apenas um resultado&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Faz algumas operações nesses dados dentro do pandas&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Ao final volta a exportar um arquivo csv com os dados trabalhados, como resultado&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Defini local onde esetão os dados&lt;/p&gt;
+&lt;p&gt;Esse ponto simplesmente define os locais onde os arquivos estarão armazenados&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Carrega os dados para o DataFrame do Pandas&lt;/p&gt;
+&lt;p&gt;Comando básico do pandas que carrega um csv para um DataFrame do Pandas, carrega em Memoria&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Garante padronização dos tipos de dados que serão usados para união dos arquivos&lt;/p&gt;
+&lt;p&gt;Nesse primeiro exemplo não iremos entrar em muitos detalhes, mas é sempre importante validar os tipos de dados que serão usados como chave de união dos dois arquivos. Esse exemplo simples, não irá gerar problemas nem um. Mas no mundo real, com arquivos maiores onde não temos controle da fonte geradora, poderá ser necessário muitos tratamentos. Mas esse exemplo resolve alguns casos básicos de tipagem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verifica se os tipos de dados estão compatives&lt;/p&gt;
+&lt;p&gt;Por garantia é sempre bom validar, e para isso estamos imprimindo na tela, os tipos de dados das chaves de união, para evitar surpresas no caso de volumes altos de dados&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Faz a união de ambos arquivos baseado na chave &lt;/p&gt;
+&lt;p&gt;Esse é uma união simples entre os dois arquivos( DataFrames ) usando algumas regrinhas basicas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Estou explicidamente definindo o &amp;quot;left_on&amp;quot; e &amp;quot;right_one&amp;quot; para tomar consciência que existe essa opção e os nomes das colunas poderiam ser um pouco diferentes.
+
+Estou usando um operação de junção &amp;quot;row=&amp;#39;left&amp;#39;&amp;quot; para tratar alguns casos especiais, onde no arquivo ( DataFrame ) da esquerda podem ter mais linhas que o da direita, e mesmo assim traria sempre o resultado, nesse nosso exemplo garantindo que do lado esquerdo(&amp;#39;left&amp;#39;), traga todas as linhas independente se ela existir no que esta no arquivo ( DataFrame ) da direita
+
+Acrescentamos o operador &amp;quot;indicator=True&amp;quot; para incluir uma nova coluna chamada &amp;quot;_merge&amp;quot;, no resultado final. No resultado poderá aparecer [&amp;quot;both&amp;quot;,&amp;quot;only_left&amp;quot;]. Onde o &amp;quot;both&amp;quot; indica que existem dados em ambos arquivos, e o &amp;quot;only_left&amp;quot; que o dado somente existe no arquivo1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Simples manipulação de dados no Pandas&lt;/p&gt;
+&lt;p&gt;Estamos usando um operador muito comum no NoteBook, de mostrar na tela o resultado que esta dentro do DataFrame, nesse caso estamos fazendo uma operação bem simples. Listando todos as linhas que tem no nome "maria" contido na coluna "Nome", o "case=False" garante que a pesquisa não fará diferença entre minúscula ou maiúscula&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Os dois arquivos estão unidos nesse ponto já, dentro do dataframe. Agora vamos converter o resultado para um novo csv&lt;/p&gt;
+&lt;p&gt;Finalmente pegamos o resultado da união de ambos arquivos e salvamos ele em um novo arquivo apontado pelo caminho.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;É muito comum trabalhar com volumes grandes de dados, e tais dados estão muitas vezes em csv ou excel.
 Nesse exemplo iremos fazer algumas manipulações básicas e comuns.&lt;/p&gt;
