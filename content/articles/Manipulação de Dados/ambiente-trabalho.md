@@ -226,11 +226,6 @@ Abaixo consta um exemplo, onde fazemos referencia a pastas criadas acima na inic
 } 
 ```
 
-
-
-
-
-
 # *7.* Estrutura de pastas (padrão da equipe)
 
 ```text
