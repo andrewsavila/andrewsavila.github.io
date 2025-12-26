@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+
+		// Python / Poetry
+		"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+		"python.terminal.activateEnvironment": true,
+
+		// Terminal
+		"terminal.integrated.env.linux": {
+		"PYTHONPATH": "${workspaceFolder}"
+		}
+
+	}
+}

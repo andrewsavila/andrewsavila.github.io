@@ -2,7 +2,19 @@ AUTHOR = 'André Wanderley de Souza'
 SITENAME = 'PolyglotData'
 SITEURL = ""
 
+# ---------- Conteúdo ----------
 PATH = "content"
+PAGE_PATHS = ['pages']
+ARTICLE_PATHS = ['articles']
+
+
+# ---------- URLs baseadas em slug ----------
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
+
+ARTICLE_URL = '{category}/{slug}.html'
+ARTICLE_SAVE_AS = '{category}/{slug}.html'
+
 
 TIMEZONE = 'America/Sao_Paulo'
 
