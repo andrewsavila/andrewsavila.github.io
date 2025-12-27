@@ -39,7 +39,7 @@ Vamos ao código:
 ```python
 import pandas as pd
 
-# Defini local onde esetão os dados
+# Defini local onde estão os dados
 nomeArquivo01 = 'dados/listapessoas01.csv'
 nomeArquivo02 = 'dados/listapessoas02.csv'
 nomeArquivoSaida = 'dados/listapessoasUnida.csv'
@@ -68,7 +68,7 @@ dfUniao.to_csv(nomeArquivoSaida, sep=";")
 
 Vamos descrever sucintamente o que o codigo faz 
 
-* Defini local onde esetão os dados
+* Defini local onde estão os dados
     
     Esse ponto simplesmente define os locais onde os arquivos estarão armazenados
 
@@ -88,11 +88,11 @@ Vamos descrever sucintamente o que o codigo faz
 
     Esse é uma união simples entre os dois arquivos( DataFrames ) usando algumas regrinhas basicas:
 
-        Estou explicidamente definindo o "left_on" e "right_one" para tomar consciência que existe essa opção e os nomes das colunas poderiam ser um pouco diferentes.
+        - Estou explicitamente definindo o "left_on" e "right_one" para tomar consciência que existe essa opção e os nomes das colunas poderiam ser um pouco diferentes.
 
-        Estou usando um operação de junção "row='left'" para tratar alguns casos especiais, onde no arquivo ( DataFrame ) da esquerda podem ter mais linhas que o da direita, e mesmo assim traria sempre o resultado, nesse nosso exemplo garantindo que do lado esquerdo('left'), traga todas as linhas independente se ela existir no que esta no arquivo ( DataFrame ) da direita
+        - Estou usando um operação de junção "row='left'" para tratar alguns casos especiais, onde no arquivo ( DataFrame ) da esquerda podem ter mais linhas que o da direita, e mesmo assim traria sempre o resultado, nesse nosso exemplo garantindo que do lado esquerdo('left'), traga todas as linhas independente se ela existir no que esta no arquivo ( DataFrame ) da direita
 
-        Acrescentamos o operador "indicator=True" para incluir uma nova coluna chamada "_merge", no resultado final. No resultado poderá aparecer ["both","only_left"]. Onde o "both" indica que existem dados em ambos arquivos, e o "only_left" que o dado somente existe no arquivo1
+        - Acrescentamos o operador "indicator=True" para incluir uma nova coluna chamada "_merge", no resultado final. No resultado poderá aparecer ["both","only_left"]. Onde o "both" indica que existem dados em ambos arquivos, e o "only_left" que o dado somente existe no arquivo1
 
 * Simples manipulação de dados no Pandas
 

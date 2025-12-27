@@ -5,7 +5,13 @@ Date: 2025-12-15 12:00
 
 ##### Quem Sou eu
 
-Meu nome é André Wanderley de Souza, atualmente estou trabalhando como Gestor de Dados do Grupo 123. Segue um pequeno resumo de meu histórico profissional.
+Meu nome é André Wanderley de Souza, estou trabalhando como Gestor de Dados do Grupo 123, onde atuo com uma equipe muito competente que está sempre buscando evoluir. Estou sempre aprendendo muito com eles. 
+
+Tenho um perfil de gestão de uma equipe técnica, equipe esta que está sempre superando-me tecnicamente, inclusive esse é um grande insentivo que faço a eles. Porem gosto de manter minha mente ágil nos aspectos técnicos, para estar acompanhando as evoluções tecnológicas e ao mesmo temo exercer uma influencia positiva na equipe.
+
+Esse site tem esse meu perfil, onde vou registrando alguns conceitos compilados.
+
+Segue um pequeno resumo de meu histórico profissional.
 
 ##### Acadêmico
 
